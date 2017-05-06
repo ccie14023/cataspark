@@ -1,5 +1,4 @@
 Cataspark
-Python script demonstrating interaction between NETCONF and REST APIs using Spark.
 =======
 
 This script demonstrates reading NETCONF data from a Catalyst switch and displaying it in a Cisco Spark room.  This is a limited demonstration of a ChatOps scenario  and not intended for fully managing a network.  However, it could be expanded and built upon.  Currently the script is limited to interacting with one switch.  The script works as follows:

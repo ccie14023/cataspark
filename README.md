@@ -40,13 +40,13 @@ dropbox_token = ""
 
 Into this, insert the following:
 
-HOST = IP address of the switch
-USERNAME = Username for NETCONF purposes
-PASSWORD = Password for this user
-SPARK_ROOM = The name of the Spark room 
-my_token = Your personal Spark token as retrieved with the directions below
-bot_token = The bot's Spark token
-dropbox_token = The dropbox token for the app you created below
+* HOST = IP address of the switch
+* USERNAME = Username for NETCONF purposes
+* PASSWORD = Password for this user
+* SPARK_ROOM = The name of the Spark room 
+* my_token = Your personal Spark token as retrieved with the directions below
+* bot_token = The bot's Spark token
+* dropbox_token = The dropbox token for the app you created below
 
 #  Using
 
@@ -55,17 +55,18 @@ Activate your VirtualEnvironment.  Then simply:
 ```
 python cataspark.py
 ```
+The script will run without any output until it is stopped with ctrl-C.
 
 Commands you can use in the Spark room (case insensitive):
 
-ping:  Generates a response from the script, not the switch.  Verifies the script is up and running.
-show the top CPU process:  Pulls the list of processes and returns the top by CPU total run time.
-show the top memory process:  Pull the list of processes and returns the top by allocated memory.
-show the bgp neighbors:  Displays the BGP neighbors' IP addresses only.
-show the routing table:  Displays the routing table.  Subnets and the interface/next hop.
-graph the routing table:  Outputs the routing table as a PNG graph and posts to the spark room.
-disable bgp neighbor x.x.x.x:  Disables the BGP neighbor with IP address x.x.x.x
-enable bgp neighbor x.x.x.x:  Enables the BGP neighbor with IP address x.x.x.x
+* ping:  Generates a response from the script, not the switch.  Verifies the script is up and running.
+* show the top CPU process:  Pulls the list of processes and returns the top by CPU total run time.
+* show the top memory process:  Pull the list of processes and returns the top by allocated memory.
+* show the bgp neighbors:  Displays the BGP neighbors' IP addresses only.
+* show the routing table:  Displays the routing table.  Subnets and the interface/next hop.
+* graph the routing table:  Outputs the routing table as a PNG graph and posts to the spark room.
+* disable bgp neighbor x.x.x.x:  Disables the BGP neighbor with IP address x.x.x.x
+* enable bgp neighbor x.x.x.x:  Enables the BGP neighbor with IP address x.x.x.x
 
 
 # Spark Bot
@@ -99,8 +100,8 @@ The script uses DropBox to host the graph of the routing table.  This is because
 2.  Showing the BGP neighbor state doesn't work.
 3.  Should have the script automatically remove the graph image files from the directory and dropbox.
 4.  The polling mechanism stops working when the Spark room hits 50 messages.  To work around either:
-	4.1  Delete and recreate Spark room.  Add the bot back.
-	4.2  Open a Python interactive shell.  Import the spark.py library and run the cleanup_room function twice.  Once with your token, once with the bot's token.
+	*  Delete and recreate Spark room.  Add the bot back.
+	*  Open a Python interactive shell.  Import the spark.py library and run the cleanup_room function twice.  Once with your token, once with the bot's token.
 
 
 

@@ -74,10 +74,10 @@ On your switch (or router) do the following:
 ```
 aaa authentication login default local
 aaa authorization exec default local
-netconf-yang
-netconf-yang cisco-odm polling-enable
 username <username> password <password>
 username <username> privilege 15
+netconf-yang
+netconf-yang cisco-odm polling-enable
 line vty 0 15
 transport input all
 ```

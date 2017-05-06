@@ -67,6 +67,20 @@ Commands you can use in the Spark room (case insensitive):
 * disable bgp neighbor x.x.x.x:  Disables the BGP neighbor with IP address x.x.x.x
 * enable bgp neighbor x.x.x.x:  Enables the BGP neighbor with IP address x.x.x.x
 
+# Enabling NETCONF
+
+On your switch (or router) do the following:
+
+```
+aaa authentication login default local
+aaa authorization exec default local
+netconf-yang
+netconf-yang cisco-odm polling-enable
+username <username> password <password>
+username <username> privilege 15
+line vty 0 15
+transport input all
+```
 
 # Spark Bot
 
@@ -95,7 +109,7 @@ The script uses DropBox to host the graph of the routing table.  This is because
 
 #  Caveats/Things to fix
 
-1.  Enable/disable using NETCONF is broken and currently uses PExpect workaround.  Should be fixed in release versions of 16.5, but need to re-write the code to use NC instead of Expect.  ASN 100 is hardcoded into the cataspark file.
+1.  Enable/disable of BGP neighbors using NETCONF is broken and currently uses PExpect workaround.  Should be fixed in release versions of 16.5, but need to re-write the code to use NC instead of Expect.  ASN 100 is hardcoded into the cataspark file.
 2.  Showing the BGP neighbor state doesn't work.
 3.  Should have the script automatically remove the graph image files from the directory and dropbox.
 4.  The polling mechanism stops working when the Spark room hits 50 messages.  To work around either:

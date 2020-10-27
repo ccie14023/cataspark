@@ -1,7 +1,7 @@
 appdirs==1.4.3
 asn1crypto==0.22.0
 cffi==1.10.0
-cryptography==1.8.1
+cryptography==3.2
 dropbox==7.2.1
 enum34==1.1.6
 graphviz==0.7

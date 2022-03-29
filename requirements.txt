@@ -10,7 +10,7 @@ ipaddress==1.0.18
 lxml==3.7.3
 ncclient==0.5.3
 packaging==16.8
-paramiko==2.1.2
+paramiko==2.10.1
 pexpect==4.2.1
 ptyprocess==0.5.1
 pyasn1==0.2.3
